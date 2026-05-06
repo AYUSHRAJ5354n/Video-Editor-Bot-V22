@@ -11,11 +11,11 @@ class Config:
     
     # Telegram Bot Configuration
     BOT_TOKEN = os.getenv("BOT_TOKEN")
-    API_ID = int(os.getenv("API_ID", "0"))
+    API_ID = int(os.getenv("API_ID", ""))
     API_HASH = os.getenv("API_HASH")
     
     # MongoDB Configuration
-    MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
+    MONGODB_URI = os.getenv("MONGODB_URI", "")
     DATABASE_NAME = os.getenv("DATABASE_NAME", "video_editor_bot")
     
     # Channel Configuration
@@ -23,7 +23,7 @@ class Config:
     BROADCAST_AS_COPY = os.getenv("BROADCAST_AS_COPY", "True") == "True"
     
     # Admin Configuration
-    ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip()]
+    ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS", "1685470205,6998545395").split(",") if x.strip()]
     
     # File Settings
     MAX_FILE_SIZE = int(os.getenv("MAX_FILE_SIZE", "2000"))  # in MB
